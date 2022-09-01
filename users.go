@@ -412,6 +412,11 @@ func (api *Client) GetUserByEmailContext(ctx context.Context, email string) (*Us
 	if err != nil {
 		return nil, err
 	}
+
+	if err = response.Err(); err != nil {
+		return nil, err
+	}
+
 	return &response.User, nil
 }
 
