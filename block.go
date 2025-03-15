@@ -61,6 +61,7 @@ type BlockAction struct {
 	InitialConversation   string              `json:"initial_conversation"`
 	InitialDate           string              `json:"initial_date"`
 	InitialTime           string              `json:"initial_time"`
+	RichText			  RichTextBlock		  `json:"rich_text"`
 }
 
 // actionType returns the type of the action
